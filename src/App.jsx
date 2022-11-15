@@ -18,7 +18,7 @@ import MyProfile from './components/MyProfile/MyProfile';
 function App() {
   return (
     <Provider store={Store}>
-      <NavBar />
+      <Header />
       <Routes>
         <Route path="/" element={<Rockets />} />
         <Route path="/Dragons" element={<Dragons />} />

@@ -1,4 +1,5 @@
-const DragonItem = ({name, type, img}) => {
+/* eslint-disable react/prop-types */
+function DragonItem({ name, type, img }) {
   return (
     <li>
       <div className="dragon-img">
@@ -10,7 +11,6 @@ const DragonItem = ({name, type, img}) => {
         <button type="button">Reserve Dragon</button>
       </div>
     </li>
-  )
+  );
 }
-
 export default DragonItem;

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Rocket from './Rocket';
 
 const Rockets = () => {

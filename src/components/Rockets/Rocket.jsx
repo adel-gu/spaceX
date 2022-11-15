@@ -1,3 +1,4 @@
+/* eslint-disable */
 const Rocket = ({description, title, image, id}) => {
   
     return (
@@ -15,4 +16,3 @@ const Rocket = ({description, title, image, id}) => {
   }
   
   export default Rocket;
-  

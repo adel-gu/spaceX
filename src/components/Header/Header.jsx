@@ -1,10 +1,10 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Planet from '../../assets/planet.png';
-import './NavBar.css';
+import './Header.css';
 import '../../App.css';
 
-function NavBar() {
+function Header() {
   const activeStyle = {
     textDecoration: 'underline',
   };
@@ -51,4 +51,4 @@ function NavBar() {
   );
 }
 
-export default NavBar;
+export default Header;

@@ -17,19 +17,21 @@ const Dragons = () => {
   }, [])
 
   return(
-    <ul className="dragons-list">
-      {
-        dragons.map((dragon) => (
-          <DragonItem 
-            key={dragon.id}
-            name={dragon.name}
-            type={dragon.type}
-            description={dragon.description}
-            img={dragon.flickr_images}
-          />
-        ))
-      }
-    </ul>
+    <div className="container" style={{border: "none"}}>
+      <ul className="dragons-list ps-0">
+        {
+          dragons.map((dragon) => (
+            <DragonItem 
+              key={dragon.id}
+              name={dragon.name}
+              type={dragon.type}
+              description={dragon.description}
+              img={dragon.flickr_images[0]}
+            />
+          ))
+        }
+      </ul>
+    </div>
   )
 }
 

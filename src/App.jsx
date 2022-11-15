@@ -15,6 +15,9 @@ import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions/Missions';
 import MyProfile from './components/MyProfile/MyProfile';
 
+// Bootstrap css
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <Provider store={Store}>

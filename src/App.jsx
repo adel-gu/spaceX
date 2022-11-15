@@ -1,10 +1,10 @@
 import React from 'react';
-import NavLink from './components/NavLink/NavLink';
+import NavBar from './components/NavBar/NavBar';
 
 function App() {
   return (
     <div className="App">
-      <NavLink />
+      <NavBar />
     </div>
   );
 }

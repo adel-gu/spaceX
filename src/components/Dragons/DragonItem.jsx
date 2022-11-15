@@ -1,4 +1,4 @@
-const DragonItem = ({id, name, type, img}) => {
+const DragonItem = ({name, type, img}) => {
   return (
     <li>
       <div className="dragon-img">

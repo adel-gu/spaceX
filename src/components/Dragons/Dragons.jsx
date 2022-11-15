@@ -1,6 +1,10 @@
+import DragonItem from "./DragonItem";
+
 const Dragons = () => {
   return(
-    <h1>Dragons</h1>
+    <ul className="dragons-list">
+      <DragonItem />
+    </ul>
   )
 }
 

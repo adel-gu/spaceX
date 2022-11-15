@@ -6,7 +6,7 @@ import { Routes, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Store
-import Store from './redux/configureStore';
+import Store from "./redux/configureStore"
 
 // Components
 import NavBar from './components/Header/NavBar';

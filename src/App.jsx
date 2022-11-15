@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import Store from "./redux/configureStore"
 
 // Components
-import NavBar from './components/Header/NavBar';
+import Header from './components/Header/Header';
 import Dragons from './components/Dragons/Dragons';
 import Rockets from './components/Rockets/Rockets';
 import Missions from './components/Missions/Missions';

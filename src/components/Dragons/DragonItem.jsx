@@ -1,4 +1,4 @@
-const DragonItem = ({name, type, img}) => {
+const DragonItem = ({name, type, description, img}) => {
   return (
     <li>
       <div className="dragon-img">
@@ -7,6 +7,7 @@ const DragonItem = ({name, type, img}) => {
       <div className="dragon-details">
         <h2>{name}</h2>
         <p>{type}</p>
+        <p>{description}</p>
         <button type="button">Reserve Dragon</button>
       </div>
     </li>

@@ -1,23 +1,24 @@
+/* eslint-disable array-callback-return */
 // Component
-import DragonItem from "./DragonItem";
+import DragonItem from './DragonItem';
 
 const Dragons = () => {
   const dragons = [];
 
-  return(
+  return (
     <ul className="dragons-list">
       {
         dragons.map((dragon) => {
-          <DragonItem 
+          <DragonItem
             key={dragon.id}
             name={dragon.name}
             type={dragon.type}
             img={dragon.flickr_images}
-          />
+          />;
         })
       }
     </ul>
-  )
-}
+  );
+};
 
 export default Dragons;

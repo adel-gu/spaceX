@@ -1,8 +1,5 @@
 import React from 'react';
-import { Routes, Route, NavLink } from 'react-router-dom';
-import Rockets from '../Rockets/Rockets';
-import Missions from '../Missions/Missions';
-import MyProfile from '../MyProfile/MyProfile';
+import { NavLink } from 'react-router-dom';
 import Planet from '../../assets/planet.png';
 import './NavBar.css';
 import '../../App.css';
@@ -11,6 +8,8 @@ function NavBar() {
   const activeStyle = {
     textDecoration: 'underline',
   };
+
+  const navLinkStyle = ({ isActive }) => (isActive ? activeStyle : undefined);
 
   return (
     <header>
@@ -23,30 +22,30 @@ function NavBar() {
           <li>
             <NavLink
               to="/"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              style={navLinkStyle}
             >
               Rockets
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/Missions"
-              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              to="/Dragons"
+              style={navLinkStyle}
             >
+              Dragons
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/Missions" style={navLinkStyle}>
               Missions
             </NavLink>
           </li>
           <li>
-            <NavLink to="/MyProfile" style={({ isActive }) => (isActive ? activeStyle : undefined)}>
+            <NavLink to="/MyProfile" style={navLinkStyle}>
               My Profile
             </NavLink>
           </li>
         </ul>
-        <Routes>
-          <Route path="/" element={<Rockets />} />
-          <Route path="/Missions" element={<Missions />} />
-          <Route path="/MyProfile" element={<MyProfile />} />
-        </Routes>
       </nav>
     </header>
   );

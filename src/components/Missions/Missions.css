@@ -8,7 +8,9 @@ th {
   text-align: left;
 }
 
-table, th, td {
+table,
+th,
+td {
   border: 1px solid rgba(128, 128, 128, 0.495);
   border-collapse: collapse;
   padding: 0.4rem;

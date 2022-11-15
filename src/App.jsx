@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Store
-import Store from './Redux/configureStore';
+import Store from './redux/configureStores';
 
 // Components
 import Header from './components/Header/Header';

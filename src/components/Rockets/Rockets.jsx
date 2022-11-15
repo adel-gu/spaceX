@@ -1,5 +1,15 @@
-function Rockets() {
+import Rocket from './Rocket';
 
-}
-
-export default Rockets;
+const Rockets = () => {
+    return (
+      <main>
+        <ul>
+            <li>
+              <Rocket/>
+            </li>
+        </ul>
+      </main>
+    );
+  }
+  
+  export default Rockets;

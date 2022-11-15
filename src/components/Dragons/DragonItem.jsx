@@ -1,12 +1,12 @@
-const DragonItem = () => {
+const DragonItem = ({id, name, type, img}) => {
   return (
     <li>
       <div className="dragon-img">
-        <img src="/" alt="/" />
+        <img src={img} alt={name} />
       </div>
       <div className="dragon-details">
-        <h2>Dragon 1</h2>
-        <p><span>Reserved</span> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est, nisi quasi autem fugit error in illo corporis similique, praesentium id architecto fugiat enim provident dignissimos atque consectetur explicabo? Debitis, doloribus?</p>
+        <h2>{name}</h2>
+        <p>{type}</p>
         <button type="button">Reserve Dragon</button>
       </div>
     </li>

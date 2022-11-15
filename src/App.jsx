@@ -2,6 +2,12 @@
 import React from 'react';
 import { Routes, Route} from 'react-router-dom';
 
+// redux provider
+import { Provider } from 'react-redux';
+
+// Store
+import Store from "./Redux/configureStore"
+
 // Components
 import Header from './components/Header/Header';
 import Dragons from './components/Dragons/Dragons';
@@ -11,7 +17,7 @@ import MyProfile from './components/MyProfile/MyProfile';
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={Store}>
       <Header />
       <Routes>
         <Route path="/" element={<Rockets />} />
@@ -19,7 +25,7 @@ function App() {
         <Route path="/Missions" element={<Missions />} />
         <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
-    </div>
+    </Provider>
   );
 }
 

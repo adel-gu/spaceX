@@ -3,7 +3,7 @@ const Rocket = ({description, title, image, id}) => {
     return (
       <div>
         <div>
-          <img src={image} alt="" />
+          <img src={image} alt={title} />
           <div>
             <h2>{title}</h2>
             <p>{description}</p>

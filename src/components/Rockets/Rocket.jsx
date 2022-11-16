@@ -17,7 +17,6 @@ const Rocket = ({
     setBooked(!booked);
   };
 
-  const reserved = <Button variant="info">Reserved</Button>;
   return (
     <div>
       <Card className="flex-md-row border-0 mb-5">
@@ -26,10 +25,9 @@ const Rocket = ({
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
           <Card.Text>
-            {booked ? reserved : ''}
             {description}
           </Card.Text>
-          <Button id={id} onClick={reserveBooking} variant={booked ? 'outline-secondary' : 'primary'}>{booked ? 'Cancel Reservation' : 'Reserve Rocket'}</Button>
+          <Button id={id} onClick={reserveBooking} variant="primary">Reserve Rocket</Button>
         </Card.Body>
       </Card>
     </div>

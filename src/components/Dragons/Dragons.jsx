@@ -9,7 +9,7 @@ import { fetchDragons } from '../../redux/dragons/dragons';
 import DragonItem from './DragonItem';
 
 const Dragons = () => {
-  const dragons = useSelector((state) => state.dragons.dragons);
+  const dragons = useSelector(state => state.dragons);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -23,9 +23,11 @@ const Dragons = () => {
           dragons.map((dragon) => (
             <DragonItem
               key={dragon.id}
+              id={dragon.id}
               name={dragon.name}
               type={dragon.type}
               description={dragon.description}
+              reserved={dragon.reserved}
               img={dragon.flickr_images[0]}
             />
           ))

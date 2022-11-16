@@ -30,4 +30,4 @@ const dragonsSlice = createSlice({
   },
 });
 
-export default dragonsSlice;
+export default dragonsSlice.reducer;

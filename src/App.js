@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 // React
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
@@ -7,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Store
-import Store from './redux/configureStore';
+import store from './redux/configureStore';
 
 // Components
 import Header from './components/Header/Header';
@@ -24,10 +23,10 @@ function App() {
     <Provider store={Store}>
       <Header />
       <Routes>
-        <Route path="/" element={<Rockets />} />
-        <Route path="/Dragons" element={<Dragons />} />
-        <Route path="/Missions" element={<Missions />} />
-        <Route path="/MyProfile" element={<MyProfile />} />
+        <Route path='/' element={<Rockets />} />
+        <Route path='/Dragons' element={<Dragons />} />
+        <Route path='/Missions' element={<Missions />} />
+        <Route path='/MyProfile' element={<MyProfile />} />
       </Routes>
     </Provider>
   );

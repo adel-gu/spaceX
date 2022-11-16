@@ -12,8 +12,8 @@ const Rockets = () => {
   const rockets = useSelector((state) => state.rockets);
 
   return (
-    <main>
-      <ul>
+    <main className="container" style={{ border: 'none' }}>
+      <ul className="dragons-list ps-0">
         {rockets.map((rocket) => (
           <li key={rocket.id}>
             <Rocket

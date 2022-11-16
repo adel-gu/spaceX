@@ -10,7 +10,6 @@ const Rockets = () => {
   }, [dispatch]);
 
   const rockets = useSelector((state) => state.rockets);
-  console.log(rockets);
 
   return (
     <main className="container" style={{ border: 'none' }}>

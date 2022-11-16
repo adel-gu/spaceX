@@ -23,10 +23,10 @@ function App() {
     <Provider store={store}>
       <Header />
       <Routes>
-        <Route path='/' element={<Rockets />} />
-        <Route path='/Dragons' element={<Dragons />} />
-        <Route path='/Missions' element={<Missions />} />
-        <Route path='/MyProfile' element={<MyProfile />} />
+        <Route path="/" element={<Rockets />} />
+        <Route path="/Dragons" element={<Dragons />} />
+        <Route path="/Missions" element={<Missions />} />
+        <Route path="/MyProfile" element={<MyProfile />} />
       </Routes>
     </Provider>
   );

@@ -6,7 +6,7 @@ import { Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 // Store
-import store from './redux/configureStore';
+import Store from './redux/configureStore';
 
 // Components
 import Header from './components/Header/Header';

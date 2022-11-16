@@ -1,27 +1,27 @@
 // React hooks
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
 // Thunk Action creators
-import { fetchDragons } from "../../redux/dragons/dragons";
+import { fetchDragons } from '../../redux/dragons/dragons';
 
 // Component
 import DragonItem from './DragonItem';
 
 const Dragons = () => {
-  const dragons = useSelector(state => state.dragons.dragons);
+  const dragons = useSelector((state) => state.dragons.dragons);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchDragons())
-  }, [])
+    dispatch(fetchDragons());
+  }, []);
 
-  return(
-    <div className="container" style={{border: "none"}}>
+  return (
+    <div className="container" style={{ border: 'none' }}>
       <ul className="dragons-list ps-0">
         {
           dragons.map((dragon) => (
-            <DragonItem 
+            <DragonItem
               key={dragon.id}
               name={dragon.name}
               type={dragon.type}
@@ -32,7 +32,7 @@ const Dragons = () => {
         }
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default Dragons;

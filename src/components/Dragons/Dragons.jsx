@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchDragons } from "../../redux/dragons/dragons";
 
 // Component
-import DragonItem from "./DragonItem";
+import DragonItem from './DragonItem';
 
 const Dragons = () => {
   const dragons = useSelector(state => state.dragons.dragons);

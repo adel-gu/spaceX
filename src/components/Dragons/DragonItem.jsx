@@ -15,7 +15,6 @@ const DragonItem = ({name, type, description, img}) => {
         </Card.Body>
       </Card>
     </li>
-  )
+  );
 }
-
 export default DragonItem;

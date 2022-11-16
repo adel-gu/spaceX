@@ -1,18 +1,25 @@
-const Rocket = ({description, title, image, id}) => {
-  
-    return (
+import PropTypes from 'prop-types';
+
+const Rocket = ({
+  name, description, image, id,
+}) => (
+  <div>
+    <div>
+      <img src={image} alt="" />
       <div>
-        <div>
-          <img src={image} alt={title} />
-          <div>
-            <h2>{title}</h2>
-            <p>{description}</p>
-            <button id={id}></button>
-          </div>
-        </div>
+        <h2>{name}</h2>
+        <p>{description}</p>
+        <button type="button" id={id}>Reserve Rocket</button>
       </div>
-    );
-  }
-  
-  export default Rocket;
-  
+    </div>
+  </div>
+);
+
+Rocket.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
+
+export default Rocket;

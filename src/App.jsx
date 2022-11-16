@@ -1,12 +1,13 @@
+/* eslint-disable linebreak-style */
 // React
 import React from 'react';
-import { Routes, Route} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // redux provider
 import { Provider } from 'react-redux';
 
 // Store
-import Store from "./redux/configureStore"
+import Store from './redux/configureStore';
 
 // Components
 import Header from './components/Header/Header';

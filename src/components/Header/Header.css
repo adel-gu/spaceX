@@ -10,6 +10,10 @@
   gap: 0.5rem;
 }
 
+a {
+  color: rgb(0, 140, 255);
+}
+
 .img {
   height: 3rem;
 }
@@ -22,4 +26,9 @@
 .nav-items li:nth-of-type(3) {
   border-right: 1.5px solid black;
   padding-right: 1rem;
+}
+
+hr {
+  width: calc(100% - 5rem);
+  margin: 0 auto;
 }

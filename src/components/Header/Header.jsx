@@ -48,7 +48,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <hr />
     </header>
   );
 }

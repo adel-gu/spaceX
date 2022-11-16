@@ -1,4 +1,3 @@
-/* eslint-disable */
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Planet from '../../assets/planet.png';
@@ -48,7 +47,6 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <hr />
     </header>
   );
 }

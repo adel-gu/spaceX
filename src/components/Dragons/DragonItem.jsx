@@ -22,7 +22,7 @@ const DragonItem = ({id, name, type, description, reserved, img}) => {
         <Card.Body>
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
-          <Card.Text>{reserved ? <Badge bg="info" className="me-2">Reserved</Badge> : ""}{description}</Card.Text>
+          <Card.Text>{description}</Card.Text>
           <Button variant="primary" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</Button>
         </Card.Body>
       </Card>

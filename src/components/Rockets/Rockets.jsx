@@ -1,16 +1,13 @@
-/* eslint-disable */
 import Rocket from './Rocket';
 
-const Rockets = () => {
-    return (
-      <main>
-        <ul>
-            <li>
-              <Rocket/>
-            </li>
-        </ul>
-      </main>
-    );
-  }
-  
-  export default Rockets;
+const Rockets = () => (
+  <main>
+    <ul>
+      <li>
+        <Rocket />
+      </li>
+    </ul>
+  </main>
+);
+
+export default Rockets;

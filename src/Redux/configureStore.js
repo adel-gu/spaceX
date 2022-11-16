@@ -1,19 +1,12 @@
-/* eslint-disable */
-// Redux
-import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
-import thunk from 'redux-thunk';
-
-// Slices
+import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import rocketReducer from './rockets/rockets';
 import dragonsSlice from './dragons/dragons';
 
-// Combine slices reducer
-const rootReducer = {
-  reducer: {
-    dragons: dragonsSlice.reducer,
-  },
-};
+const rootReducer = combineReducers({
+  rockets: rocketReducer,
+  dragons: dragonsSlice,
+});
 
-// Configure Store
-const Store = configureStore(rootReducer, applyMiddleware(thunk));
+const store = configureStore({ reducer: rootReducer });
 
-export default Store;
+export default store;

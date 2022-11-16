@@ -9,7 +9,7 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
 // Redux Actions
-import { reserveDragon } from '../../redux/dragons/dragons';
+import { reserveDragon,  cancelReserveDragon} from '../../redux/dragons/dragons';
 
 
 const DragonItem = ({id, name, type, description, reserved, img}) => {
@@ -23,7 +23,10 @@ const DragonItem = ({id, name, type, description, reserved, img}) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
           <Card.Text>{reserved ? <Badge bg="info" className="me-2">Reserved</Badge> : ""}{description}</Card.Text>
-          <Button variant="primary" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</Button>
+          {
+            (reserved) ? <Button variant="btn btn-outline-secondary" onClick={() => dispatch(cancelReserveDragon(id))}>Cancel Reservation</Button> : 
+            <Button variant="primary" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</Button>
+          }
         </Card.Body>
       </Card>
     </li>

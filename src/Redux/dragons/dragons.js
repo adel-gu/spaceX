@@ -19,23 +19,27 @@ export const fetchDragons = createAsyncThunk(FETCH_DRAGONS, async () => {
 // Create the dragons slice
 const dragonsSlice = createSlice({
   name: 'dragons',
-  initialState: {
-    dragons: [],
-  },
+  initialState: [],
   reducers: {
     reserveDragon: (state, action) => {
-      const newState = state.dragons.map((dragon) =>
-        dragon.id === action.payload ? { ...dragon, reserved: true } : dragon
-      );
-      state.dragons = newState;
+      const newState = state.map((dragon) => {
+        if (dragon.id === action.payload) {
+          return { ...dragon, reserved: true };
+        }
+        return dragon;
+      });
+      return newState;
     },
   },
   extraReducers: (builder) => {
     // Fetch dragons
     builder.addCase(fetchDragons.fulfilled, (state, action) => {
-      state.dragons = action.payload.map((dragon) => {
-        return { ...dragon, reserved: false };
-      });
+      const newState = action.payload.map((dragon) => ({
+        ...dragon,
+        reserved: false,
+      }));
+
+      return newState;
     });
   },
 });

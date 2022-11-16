@@ -9,7 +9,7 @@ import { fetchDragons } from "../../redux/dragons/dragons";
 import DragonItem from './DragonItem';
 
 const Dragons = () => {
-  const dragons = useSelector(state => state.dragons.dragons);
+  const dragons = useSelector(state => state.dragons);
   const dispatch = useDispatch();
 
   useEffect(() => {

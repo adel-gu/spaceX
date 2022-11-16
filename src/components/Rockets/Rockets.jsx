@@ -10,6 +10,7 @@ const Rockets = () => {
   }, [dispatch]);
 
   const rockets = useSelector((state) => state.rockets);
+  console.log(rockets);
 
   return (
     <main className="container" style={{ border: 'none' }}>
@@ -17,10 +18,11 @@ const Rockets = () => {
         {rockets.map((rocket) => (
           <li key={rocket.id}>
             <Rocket
-              image={rocket.image}
+              img={rocket.flickr_images[0]}
               id={rocket.id}
+              type={rocket.rocket_type}
               description={rocket.description}
-              name={rocket.name}
+              name={rocket.rocket_name}
             />
           </li>
         ))}

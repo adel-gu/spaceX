@@ -10,8 +10,9 @@
   gap: 0.5rem;
 }
 
-a {
+li a {
   color: rgb(0, 140, 255);
+  text-decoration: none;
 }
 
 .img {

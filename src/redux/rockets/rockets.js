@@ -29,6 +29,6 @@ const rocketSlice = createSlice({
   },
 });
 
-const rocketReducer = rocketSlice.reducer;
-export default rocketReducer;
+const rocketsReducer = rocketSlice.reducer;
+export default rocketsReducer;
 export { fetchRockets };

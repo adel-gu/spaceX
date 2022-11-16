@@ -6,6 +6,7 @@ const API_URL = 'https://api.spacexdata.com/v3/dragons';
 
 // Actions
 const FETCH_DRAGONS = 'spaceX/dragons/FETCH_DRAGONS';
+// const BOOK_DRAGON = 'spaceX/dragons/BOOK_DRAGON';
 
 // Thunk action creatore
 export const fetchDragons = createAsyncThunk(FETCH_DRAGONS, async () => {
@@ -21,13 +22,23 @@ const dragonsSlice = createSlice({
   initialState: {
     dragons: [],
   },
+  reducers: {
+    reserveDragon: (state, action) => {
+      const newState = state.dragons.map((dragon) =>
+        dragon.id === action.payload ? { ...dragon, reserved: true } : dragon
+      );
+      state.dragons = newState;
+    },
+  },
   extraReducers: (builder) => {
     // Fetch dragons
     builder.addCase(fetchDragons.fulfilled, (state, action) => {
-      const newState = state;
-      newState.dragons = action.payload;
+      state.dragons = action.payload.map((dragon) => {
+        return { ...dragon, reserved: false };
+      });
     });
   },
 });
 
+export const { reserveDragon } = dragonsSlice.actions;
 export default dragonsSlice.reducer;

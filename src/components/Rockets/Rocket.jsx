@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
 import { rocketBooking, rocketCancelation } from '../../redux/rockets/rockets';
 
 const Rocket = ({
@@ -25,6 +26,7 @@ const Rocket = ({
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
           <Card.Text>
+            {reserved ? <Badge bg="info" className="me-2">Reserved</Badge> : ''}
             {description}
           </Card.Text>
           <Button id={id} onClick={reserved ? canceling : booking} variant={reserved ? 'outline-secondary' : 'primary'}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</Button>

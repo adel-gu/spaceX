@@ -1,20 +1,20 @@
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { rocketBooking } from '../../redux/rockets/rockets';
+import { rocketBooking, rocketCancelation } from '../../redux/rockets/rockets';
 
 const Rocket = ({
-  name, type, description, img, id,
+  name, type, description, img, id, reserved,
 }) => {
   const dispatch = useDispatch();
 
-  const [booked, setBooked] = useState(false);
-
-  const reserveBooking = () => {
+  const booking = () => {
     dispatch(rocketBooking(id));
-    setBooked(!booked);
+  };
+
+  const canceling = () => {
+    dispatch(rocketCancelation(id));
   };
 
   return (
@@ -27,7 +27,7 @@ const Rocket = ({
           <Card.Text>
             {description}
           </Card.Text>
-          <Button id={id} onClick={reserveBooking} variant="primary">Reserve Rocket</Button>
+          <Button id={id} onClick={reserved ? canceling : booking} variant={reserved ? 'outline-secondary' : 'primary'}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</Button>
         </Card.Body>
       </Card>
     </div>
@@ -40,6 +40,7 @@ Rocket.propTypes = {
   type: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
+  reserved: PropTypes.bool.isRequired,
 };
 
 export default Rocket;

@@ -23,8 +23,11 @@ const DragonItem = ({id, name, type, description, reserved, img}) => {
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
           <Card.Text>{description}</Card.Text>
-          <Button variant="btn btn-outline-secondary" onClick={() => dispatch(cancelReserveDragon(id))}>Cancel Reservation</Button> 
-          <Button variant="primary" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</Button>
+          {
+            (reserved) ? <Button variant="btn btn-outline-secondary" onClick={() => dispatch(cancelReserveDragon(id))}>Cancel Reservation</Button> 
+            :
+            <Button variant="primary" onClick={() => dispatch(reserveDragon(id))}>Reserve Dragon</Button>
+          }
         </Card.Body>
       </Card>
     </li>

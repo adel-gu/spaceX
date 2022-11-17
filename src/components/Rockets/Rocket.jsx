@@ -11,12 +11,10 @@ const Rocket = ({
 
   const booking = () => {
     dispatch(rocketBooking(id));
-    console.log(reserved);
   };
 
   const canceling = () => {
     dispatch(rocketCancelation(id));
-    console.log(reserved);
   };
 
   return (

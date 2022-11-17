@@ -17,6 +17,8 @@ const Rocket = ({
     dispatch(rocketCancelation(id));
   };
 
+  const badge = <Button variant="info">Reserved</Button>;
+
   return (
     <div>
       <Card className="flex-md-row border-0 mb-5">
@@ -25,6 +27,7 @@ const Rocket = ({
           <Card.Title>{name}</Card.Title>
           <Card.Text>{type}</Card.Text>
           <Card.Text>
+            {reserved ? badge : ''}
             {description}
           </Card.Text>
           <Button id={id} onClick={reserved ? canceling : booking} variant={reserved ? 'outline-secondary' : 'primary'}>{reserved ? 'Cancel Reservation' : 'Reserve Rocket'}</Button>

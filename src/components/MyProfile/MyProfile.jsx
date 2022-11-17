@@ -21,6 +21,7 @@ function MyProfile() {
         </ListGroup>
       </div>
 
+      {/* Display Dragons */}
       <div>
         <h1>My Dragons</h1>
         <ListGroup style={{ width: '30rem' }}>

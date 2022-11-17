@@ -8,7 +8,7 @@ function MyProfile() {
   const dragons = useSelector((state) => state.dragons);
   const reservedDragons = dragons.filter((dragon) => dragon.reserved === true);
   return (
-    <Stack direction="horizontal" gap={3}>
+    <Stack className="container" style={{ border: 'none' }} direction="horizontal" gap={3}>
       {/* Display Rockets */}
       <div>
         <h1>My Rockets</h1>

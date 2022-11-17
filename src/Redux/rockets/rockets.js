@@ -33,10 +33,7 @@ const rocketSlice = createSlice({
     builder
       .addCase(fetchRockets.fulfilled, (state, action) => {
         let newState = state;
-        newState = action.payload.map((rocket) => ({
-          ...rocket,
-          reserved: false,
-        }));
+        newState = action.payload;
         return newState;
       })
       .addDefaultCase((state) => state);

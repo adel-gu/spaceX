@@ -1,36 +1,37 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import Mission from './Mission';
+import { fetchMissions } from '../../redux/Missions/Missions';
 import './Missions.css';
 
 function Missions() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchMissions());
+  }, [dispatch]);
+
+  const missions = useSelector((state) => state.missions);
   return (
-    <div>
+    <main>
       <table>
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th>Mission Status</th>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td><button type="button">Join</button></td>
-        </tr>
-        <tr>
-          <td>Centro</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td><button type="button">Join</button></td>
-        </tr>
-        <tr>
-          <td>Centro</td>
-          <td>Francisco Chang</td>
-          <td>Mexico</td>
-          <td><button type="button">Join</button></td>
-        </tr>
+        <tbody>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>{' '}</th>
+          </tr>
+          {missions.map((mission) => (
+            <Mission
+              key={mission.mission_id}
+              id={mission.mission_id}
+              name={mission.mission_name}
+              description={mission.description}
+            />
+          ))}
+        </tbody>
       </table>
-    </div>
+    </main>
   );
 }
 

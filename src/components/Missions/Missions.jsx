@@ -16,10 +16,10 @@ function Missions() {
       <table>
         <tbody>
           <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>{' '}</th>
+            <th className="border">Mission</th>
+            <th className="border">Description</th>
+            <th className="border">Status</th>
+            <th className="border">{' '}</th>
           </tr>
           {missions.map((mission) => (
             <Mission

@@ -18,14 +18,16 @@ function Mission({ id, name, description, reserved }) {
   return (
     <>
       <tr key={id}>
-        <td>{name}</td>
-        <td>{description}</td>
+        <td className="border">{name}</td>
+        <td className="border" style={{maxWidth: '40rem'}}>{description}</td>
         <td className="border">
           <Badge bg={reserved ? "info" : "secondary"}>
             {reserved ? "ACTIVE MEMBER" : "NOT A MEMEBR"}
           </Badge>
         </td>
-        <td className="border">
+        <td 
+          className="border"
+          >
           <Button
             id={id}
             onClick={reserved ? leave : join}

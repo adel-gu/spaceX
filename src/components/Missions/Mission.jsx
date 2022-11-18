@@ -20,8 +20,10 @@ function Mission({ id, name, description, reserved }) {
       <tr key={id}>
         <td>{name}</td>
         <td>{description}</td>
-        <td>
-          <Badge bg="secondary">NOT A MEMBER</Badge>
+        <td className="border">
+          <Badge bg={reserved ? "info" : "secondary"}>
+            {reserved ? "ACTIVE MEMBER" : "NOT A MEMEBR"}
+          </Badge>
         </td>
         <td className="border">
           <Button
@@ -41,7 +43,7 @@ Mission.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  reserved: PropTypes.string
+  reserved: PropTypes.string,
 };
 
 export default Mission;

@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 // Thunk Action creators
-import { fetchDragons } from '../../redux/dragons/dragons';
+import { fetchDragons } from '../../Redux/dragons/dragons';
 
 // Component
 import DragonItem from './DragonItem';

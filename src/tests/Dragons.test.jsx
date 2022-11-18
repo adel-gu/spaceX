@@ -4,14 +4,14 @@ import { Provider } from 'react-redux';
 import Dragons from '../components/Dragons/Dragons';
 
 // Sotre
-import store from '../redux/configureStore';
+import store from '../Redux/configureStore';
 
 // Reducer and Actions
 import reducer, {
   fetchDragons,
   reserveDragon,
   cancelReserveDragon,
-} from '../redux/dragons/dragons';
+} from '../Redux/dragons/dragons';
 
 // Data
 const dragon1 = {

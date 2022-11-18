@@ -2,7 +2,7 @@ import Badge from "react-bootstrap/Badge";
 import PropTypes from "prop-types";
 import Button from "react-bootstrap/Button";
 import { useDispatch } from "react-redux";
-import { joinMission, leavingMission } from "../../redux/Missions/Missions";
+import { joinMission, leavingMission } from "../../Redux/Missions/Missions";
 
 function Mission({ id, name, description, reserved }) {
   const dispatch = useDispatch();

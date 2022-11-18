@@ -3,9 +3,9 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../redux/configureStore';
+import store from '../Redux/configureStore';
 import Missions from '../components/Missions/Missions';
-import { fetchMissions, joinMission, leavingMission } from '../redux/Missions/Missions';
+import { fetchMissions, joinMission, leavingMission } from '../Redux/Missions/Missions';
 
 describe('Missions renders correctly', () => {
   test('Renders missions Correctly', () => {

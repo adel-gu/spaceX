@@ -9,7 +9,7 @@ import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
 
 // Redux Actions
-import { reserveDragon,  cancelReserveDragon} from '../../redux/dragons/dragons';
+import { reserveDragon,  cancelReserveDragon} from '../../Redux/dragons/dragons';
 
 
 const DragonItem = ({id, name, type, description, reserved, img}) => {

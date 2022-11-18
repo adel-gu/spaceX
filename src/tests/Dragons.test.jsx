@@ -6,15 +6,12 @@ import Dragons from '../components/Dragons/Dragons';
 // Sotre
 import store from '../redux/configureStore';
 
-// Actions
-import {
+// Reducer and Actions
+import reducer, {
   fetchDragons,
   reserveDragon,
   cancelReserveDragon,
 } from '../redux/dragons/dragons';
-
-// Dragon Reducers
-import reducer from '../redux/dragons/dragons';
 
 // Data
 const dragon1 = {

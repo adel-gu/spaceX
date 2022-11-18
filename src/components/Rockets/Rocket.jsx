@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Badge from 'react-bootstrap/Badge';
-import { rocketBooking, rocketCancelation } from '../../Redux/rockets/rockets';
+import { rocketBooking, rocketCancelation } from '../../redux/rockets/rockets';
 
 const Rocket = ({
   name, type, description, img, id, reserved,

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Mission from './Mission';
-import { fetchMissions } from '../../redux/Missions/Missions';
+import { fetchMissions } from '../../Redux/Missions/Missions';
 import './Missions.css';
 
 function Missions() {
@@ -16,10 +16,10 @@ function Missions() {
       <table>
         <tbody>
           <tr>
-            <th>Mission</th>
-            <th>Description</th>
-            <th>Status</th>
-            <th>{' '}</th>
+            <th className="border">Mission</th>
+            <th className="border">Description</th>
+            <th className="border">Status</th>
+            <th className="border">{' '}</th>
           </tr>
           {missions.map((mission) => (
             <Mission

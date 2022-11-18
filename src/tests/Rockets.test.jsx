@@ -3,9 +3,9 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../redux/configureStore';
+import store from '../Redux/configureStore';
 import Rockets from '../components/Rockets/Rockets';
-import { fetchRockets, rocketBooking, rocketCancelation } from '../redux/rockets/rockets';
+import { fetchRockets, rocketBooking, rocketCancelation } from '../Redux/rockets/rockets';
 
 describe('Rocket renders correctly', () => {
   test('Renders rockets Correctly', () => {

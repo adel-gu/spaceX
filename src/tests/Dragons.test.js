@@ -1,9 +1,9 @@
 import { render, screen } from '@testing-library/react';
 // Component
+import { Provider } from 'react-redux';
 import Dragons from '../components/Dragons/Dragons';
 
 // Sotre
-import { Provider } from 'react-redux';
 import store from '../redux/configureStore';
 
 // Actions
@@ -44,7 +44,7 @@ describe('Testing Dragons', () => {
     render(
       <Provider store={store}>
         <Dragons />
-      </Provider>
+      </Provider>,
     );
     expect(screen).toMatchSnapshot();
   });
@@ -65,7 +65,7 @@ describe('Testing Dragons', () => {
   test('Cancel reservation should set reserved property to false', () => {
     const CancelReservedDragon = reducer(
       reservedDragon,
-      cancelReserveDragon(1)
+      cancelReserveDragon(1),
     );
     expect(CancelReservedDragon[0].reserved).toBeFalsy();
   });

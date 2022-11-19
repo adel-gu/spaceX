@@ -2,7 +2,10 @@
 
 # Space-Travellers-Hub
 
-> This is react-redux project that involves creating a rocket and mission booking for space adventures. It uses the SpaceX API to get the data that is implemented using axios and thunk.
+> This is react-redux project that involves creating a rocket, dragons and missions booking for space adventures. It uses the SpaceX API to get the data that is implemented using fetch and thunk.
+
+## Preview
+![image](https://user-images.githubusercontent.com/68030297/202867250-b33728e2-5e8d-4d12-b80b-1cf13ee42298.png)
 
 ## Built With
 - jsx
@@ -13,7 +16,7 @@
 
 ## Live Demo
 
-[Live Version]()
+**Netlify:** [SapceX-travelers](https://sapcextravelers.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running, follow the steps in Setup below.

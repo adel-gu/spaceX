@@ -9,12 +9,12 @@ import { fetchDragons } from '../../Redux/dragons/dragons';
 import DragonItem from './DragonItem';
 
 const Dragons = () => {
-  const dragons = useSelector(state => state.dragons);
+  const dragons = useSelector((state) => state.dragons);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(fetchDragons());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="container" style={{ border: 'none' }}>

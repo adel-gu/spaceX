@@ -17,7 +17,7 @@ function MyProfile() {
     <Stack className="container" style={{ border: 'none' }} direction="horizontal" gap={3}>
       {/* Display Rockets */}
       <div className="row">
-        <div className='col-6'>
+        <div className="col-6">
           <h1>My Rockets</h1>
           <ListGroup style={{ width: '30rem' }}>
             {
@@ -29,7 +29,7 @@ function MyProfile() {
         </div>
 
         {/* Display Dragons */}
-        <div className='col-6'>
+        <div className="col-6">
           <h1>My Dragons</h1>
           <ListGroup style={{ width: '30rem' }}>
             {
@@ -41,7 +41,7 @@ function MyProfile() {
         </div>
 
         {/* Display Missions */}
-        <div className='col-6'>
+        <div className="col-6">
           <h1>My Missions</h1>
           <ListGroup style={{ width: '30rem' }}>
             {

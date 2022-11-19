@@ -31,7 +31,10 @@ const missionSlice = createSlice({
     builder
       .addCase(fetchMissions.fulfilled, (state, action) => {
         let newState = state;
-        newState = action.payload;
+        newState = action.payload.map((mission) => ({
+          ...mission,
+          reserved: false,
+        }));
         return newState;
       })
       .addDefaultCase((state) => state);

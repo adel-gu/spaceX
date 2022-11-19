@@ -9,7 +9,7 @@ function Header() {
     textDecoration: 'underline',
   };
 
-  const navLinkStyle = ({ isActive }) => (isActive ? activeStyle : undefined);
+  const navLinkStyle = ({isActive}) => (isActive ? activeStyle : undefined);
 
   return (
     <header>
